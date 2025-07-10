@@ -30,9 +30,9 @@ if st.button("🔄 Tazele"):
     usd, eur, xau, sil, usd_chg, eur_chg, xau_chg, sil_chg = kur_getir()
     if usd and eur and xau and sil:
         st.success("Kurlar başarıyla güncellendi.")
-        st.metric("💵 USD/TRY", f"{usd}", f"(%{usd_chg})")
-        st.metric("💶 EUR/TRY", f"{eur}", f"(%{eur_chg})")
-        st.metric("🥇 XAU/TRY", f"{xau}", f"(%{xau_chg})")
-        st.metric("🔘 SIL/TRY", f"{sil}", f"(%{sil_chg})")
+        st.metric("💵 USD/TRY", f"{usd}", delta = usd_chg)
+        st.metric("💶 EUR/TRY", f"{eur}", delta = eur_chg)
+        st.metric("🥇 XAU/TRY", f"{xau}", delta = xau_chg)
+        st.metric("🔘 SIL/TRY", f"{sil}", delta = sil_chg)
 else:
     st.info("Lütfen 'Tazele' butonuna basarak kurları güncelleyin.")

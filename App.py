@@ -32,7 +32,7 @@ if st.button("🔄 Tazele"):
         st.success("Kurlar başarıyla güncellendi.")
         st.metric("💵 USD/TRY", f"{usd}", delta = usd_chg)
         st.metric("💶 EUR/TRY", f"{eur}", delta = eur_chg)
-        st.metric("🥇 XAU/TRY", f"{xau}", delta = xau_chg)
-        st.metric("🔘 SIL/TRY", f"{sil}", delta = sil_chg)
+        st.metric("🥇 GRAM ALTIN", f"{xau}", delta = xau_chg)
+        st.metric("🔘 GRAM GÜMÜŞ", f"{sil}", delta = sil_chg)
 else:
     st.info("Lütfen 'Tazele' butonuna basarak kurları güncelleyin.")

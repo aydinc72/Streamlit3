@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 
 st.title("Güncel Kur Bilgileri")
-st.markdown("USD/TRY, EUR/TRY, Altın, Gümüş")
 
 def kur_getir():
     try:
@@ -29,7 +28,6 @@ def kur_getir():
 if st.button("🔄 Tazele"):
     usd, eur, xau, sil, usd_chg, eur_chg, xau_chg, sil_chg = kur_getir()
     if usd and eur and xau and sil:
-        st.success("Kurlar başarıyla güncellendi.")
         st.metric("💵 USD/TRY", f"{usd}", delta = usd_chg)
         st.metric("💶 EUR/TRY", f"{eur}", delta = eur_chg)
         st.metric("🥇 GRAM ALTIN", f"{xau}", delta = xau_chg)

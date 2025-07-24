@@ -6,7 +6,8 @@ st.title("Güncel Kur Bilgileri")
 def kur_getir():
     try:
         #response = requests.get("https://v6.exchangerate-api.com/v6/042c28ecc2f6239f665c9f42/pair/USD/TRY")
-        response = requests.get("https://finans.truncgil.com/v4/today.json")
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get("https://finans.truncgil.com/v4/today.json", headers=headers)
         data = response.json()
         usd_try = data["USD"]["Buying"]   
         usd_change = data["USD"]["Change"]   
